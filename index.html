@@ -5,52 +5,29 @@
     <meta charset="UTF-8">
     <title>កម្រងវិញ្ញាសាគណិតវិទ្យាសម្រាប់ថ្នាក់ទី១១និង១២</title>
     <style>
-        body { 
-            font-family: 'Khmer OS Battambang', sans-serif; 
-            padding: 20px; 
-            background-color: #eef2f3; 
-        }
-        .container { 
-            max-width: 900px; 
-            margin: auto; 
-            background: white; 
-            padding: 20px; 
-            border-radius: 10px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-        }
-        h2 { text-align: center; color: #1e3c72; margin-bottom: 30px; }
-        .grid-menu { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-            gap: 12px; 
-        }
+        body { font-family: 'Khmer OS Battambang', sans-serif; padding: 20px; background-color: #eef2f3; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h2 { text-align: center; color: #1e3c72; margin-bottom: 30px; line-height: 1.6; }
+        .grid-menu { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
         .card-link { 
-            display: block; 
-            padding: 12px; 
-            text-align: center; 
-            background: #2a5298; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 6px; 
-            font-size: 14px;
-            transition: 0.3s;
+            display: block; padding: 12px; text-align: center; background: #2a5298; 
+            color: white; text-decoration: none; border-radius: 6px; font-size: 14px; transition: 0.3s;
         }
-        .card-link:hover { 
-            background: #1e3c72; 
-            transform: translateY(-2px); 
-        }
+        .card-link:hover { background: #1e3c72; transform: translateY(-2px); }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>កម្រងវិញ្ញាសាគណិតវិទ្យាសម្រាប់ថ្នាក់ទី១១និង១២<br>
+    <h2>កម្រងវិញ្ញាសាគណិតវិទ្យាសម្រាប់ថ្នាក់ទី១១ និង១២<br>
     រៀបចំដោយលោកគ្រូ រស់ មករា<br>
-    Telegram: 086 228 508</h2>
-    <div class="grid-menu" id="repo-list">
+    <span style="font-size: 16px;">Telegram: 086 228 508</span></h2>
+    
+    <div class="grid-menu">
         <script>
+            // ទីនេះអ្នកអាចប្ដូរឈ្មោះខ្មែរតាមចិត្តចង់បាន
             const repos = [
-               { id: "Vector-1", name: "វ៉ិចទ័រ ១" },
+                { id: "Vector-1", name: "វ៉ិចទ័រ ១" },
                 { id: "Vector-2", name: "វ៉ិចទ័រ ២" },
                 { id: "Vector-3", name: "វ៉ិចទ័រ ៣" },
                 { id: "complexnumber", name: "ចំនួនកុំផ្លិច" },
@@ -70,9 +47,8 @@
             ];
 
             repos.forEach(repo => {
-                // បង្កើត Link ទៅកាន់ GitHub ដោយស្វ័យប្រវត្តិ
-                const url = `https://rosmakara71-hub.github.io/${repo}`;
-                document.write(`<a href="${url}" class="card-link" target="_blank">${repo}</a>`);
+                const url = `https://rosmakara71-hub.github.io/${repo.id}`;
+                document.write(`<a href="${url}" class="card-link" target="_blank">${repo.name}</a>`);
             });
         </script>
     </div>
