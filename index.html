@@ -1,30 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="km">
 <head>
     <meta charset="UTF-8">
-    <title>វិញ្ញាសាគណិតវិទ្យា</title>
+    <title>កម្រងវិញ្ញាសាគណិតវិទ្យាសម្រាប់ថ្នាក់ទី១១និង១២</title>
     <style>
-        body { font-family: 'Khmer OS Battambang', sans-serif; padding: 20px; background-color: #f4f7f6; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h2 { text-align: center; color: #2c3e50; }
-        .grid-menu { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 20px; }
-        .card-link { 
-            display: block; padding: 15px; text-align: center; background: #3498db; 
-            color: white; text-decoration: none; border-radius: 5px; transition: 0.3s;
+        body { 
+            font-family: 'Khmer OS Battambang', sans-serif; 
+            padding: 20px; 
+            background-color: #eef2f3; 
         }
-        .card-link:hover { background: #2980b9; transform: translateY(-2px); }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        }
+        h2 { text-align: center; color: #1e3c72; margin-bottom: 30px; }
+        .grid-menu { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 12px; 
+        }
+        .card-link { 
+            display: block; 
+            padding: 12px; 
+            text-align: center; 
+            background: #2a5298; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .card-link:hover { 
+            background: #1e3c72; 
+            transform: translateY(-2px); 
+        }
     </style>
-
 </head>
 <body>
 
 <div class="container">
-    <h2>កម្រងវិញ្ញាសាលើចំនួនកុំផ្លិច</h2>
-    <div class="grid-menu">
+    <h2>កម្រងវិញ្ញាសាគណិតវិទ្យាសម្រាប់ថ្នាក់ទី១១និង១២ញុំ</h2>
+    <div class="grid-menu" id="repo-list">
         <script>
-            for (let i = 1; i <= 20; i++) {
-                document.write(`<a href="${i}.html" class="card-link">វិញ្ញាសាទី ${i}</a>`);
-            }
+            const repos = [
+                "Vector-1", "period", "math-test1", "trigonometric-rule", 
+                "math-quiz-grade-11-12", "preexamgrade12bacII", "preexamgrade11term2", 
+                "math11-value-trigonometric", "domain", "Vector-3", "math-tri1", 
+                "preexamgrade12bacII-2", "trigonometric-evenodd", "Vector-9", 
+                "Vector-8", "Vector-7", "Vector-6", "Vector-5", "Vector-10", 
+                "Vector-11", "Vector-2", "Vector-4", "math-test2", "math-test-ode1", 
+                "trigonometric-equation", "firstode", "math12-test", "preexamgrade12bacII-5", 
+                "preexamgrade12bacII-4", "preexamgrade12bacII-3", "preexamgrade12bacII-1", 
+                "preexamgrade11term2-2", "preexamgrade12bacII-6", "complexnumber", 
+                "prebacIISS", "preexamgrade11term2-3"
+            ];
+
+            repos.forEach(repo => {
+                // បង្កើត Link ទៅកាន់ GitHub ដោយស្វ័យប្រវត្តិ
+                const url = `https://rosmakara71-hub.github.io/${repo}`;
+                document.write(`<a href="${url}" class="card-link" target="_blank">${repo}</a>`);
+            });
         </script>
     </div>
 </div>
