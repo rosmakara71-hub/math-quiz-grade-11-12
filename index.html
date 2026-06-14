@@ -1,181 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="km">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ទំព័រដើម - គណិតវិទ្យា លោកគ្រូ រស់ មករា</title>
+    <title>វិញ្ញាសាគណិតវិទ្យា</title>
     <style>
-        body {
-            font-family: 'Khmer OS Battambang', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f7f6;
-            color: #333;
-            margin: 0;
-            padding: 20px;
+        body { font-family: 'Khmer OS Battambang', sans-serif; padding: 20px; background-color: #f4f7f6; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #2c3e50; }
+        .grid-menu { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 20px; }
+        .card-link { 
+            display: block; padding: 15px; text-align: center; background: #3498db; 
+            color: white; text-decoration: none; border-radius: 5px; transition: 0.3s;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .header-box {
-            text-align: center;
-            border: 2px solid #ccc;
-            padding: 15px;
-            margin-bottom: 30px;
-            background-color: #fafafa;
-        }
-        .header-box h1 {
-            font-family: 'Khmer OS Muol Light', Arial, sans-serif;
-            font-size: 24px;
-            margin: 0 0 10px 0;
-            color: #1e3a8a;
-        }
-        .header-box p {
-            font-size: 18px;
-            margin: 5px 0;
-            font-weight: bold;
-        }
-        .telegram-info {
-            color: #0088cc;
-            font-size: 18px;
-        }
-        
-        /* រចនាប័ទ្មតារាងតេស្ត */
-        .test-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .test-table td {
-            border: 1px solid #333;
-            padding: 12px;
-            font-size: 18px;
-            width: 20%;
-        }
-        .test-table td a {
-            text-decoration: none;
-            color: #000;
-            display: block;
-            font-weight: bold;
-        }
-        .test-table td a:hover {
-            color: #1e3a8a;
-            background-color: #e2e8f0;
-        }
-
-        /* រចនាប័ទ្មបញ្ជីតំណភ្ជាប់ផ្សេងៗ */
-        h2 {
-            font-family: 'Khmer OS Muol Light', Arial, sans-serif;
-            font-size: 20px;
-            color: #1e3a8a;
-            border-bottom: 2px solid #1e3a8a;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background: #f8fafc;
-            margin-bottom: 10px;
-            padding: 12px 15px;
-            border-left: 4px solid #1e3a8a;
-            border-radius: 0 4px 4px 0;
-            transition: 0.2s;
-        }
-        li:hover {
-            background: #f1f5f9;
-            transform: translateX(5px);
-        }
-        .link-item a {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: bold;
-            word-break: break-all;
-        }
-        .link-item a:hover {
-            text-decoration: underline;
-            color: #1d4ed8;
-        }
-        .date-badge {
-            font-size: 12px;
-            color: #64748b;
-            display: block;
-            margin-bottom: 4px;
-        }
+        .card-link:hover { background: #2980b9; transform: translateY(-2px); }
     </style>
+
+<a href="https://rosmakara71-hub.github.io/math-quiz-grade-11-12/" style="padding: 8px 16px; background: #e2e8f0; color: #333; text-decoration: none; border-radius: 5px; font-family: sans-serif;">
+    ⬅ ថយក្រោយ</a>
+
 </head>
 <body>
 
 <div class="container">
-
-    <div class="header-box">
-        <h1>តេស្តគណិតវិទ្យាថ្នាក់ទី១១និង១២</h1>
-        <p>រៀបចំដោយលោកគ្រូ រស់ មករា</p>
-        <p class="telegram-info">តេឡេក្រាម ០៨៦ ២២៨ ៥០៨</p>
+    <h2>កម្រងវិញ្ញាសាលើចំនួនកុំផ្លិច</h2>
+    <div class="grid-menu">
+        <script>
+            for (let i = 1; i <= 20; i++) {
+                document.write(`<a href="${i}.html" class="card-link">វិញ្ញាសាទី ${i}</a>`);
+            }
+        </script>
     </div>
-
-    <table class="test-table">
-        <tr>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-1/" target="_blank">វ៉ិចទ័រទី១</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-2/" target="_blank">វ៉ិចទ័រទី២</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-3/" target="_blank">វ៉ិចទ័រទី៣</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-4/" target="_blank">វ៉ិចទ័រទី៤</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-5/" target="_blank">វ៉ិចទ័រទី៥</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-6/" target="_blank">វ៉ិចទ័រទី៦</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-7/" target="_blank">វ៉ិចទ័រទី៧</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-8/" target="_blank">វ៉ិចទ័រទី៨</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-9/" target="_blank">វ៉ិចទ័រទី៩</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-10/" target="_blank">វ៉ិចទ័រទី១០</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://rosmakara71-hub.github.io/Vector-11/" target="_blank">វ៉ិចទ័រទី១១</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/trigonometric-rule/" target="_blank">តេស្តរង្វាយតម្លៃលើរូបមន្តត្រីកោណមាត្រ</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/period/" target="_blank">ខួបអនុគមន៍</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/domain/" target="_blank">ដែនកំណត់អនុគមន៍</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/math11-value-trigonometric/" target="_blank">តម្លៃត្រីកោណមាត្រ ថ្នាក់ទី១១</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://rosmakara71-hub.github.io/math-tri1/" target="_blank">ត្រីកោណមាត្រ ១</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/trigonometric-evenodd/" target="_blank">អនុគមន៍គូ-សេស ត្រីកោណមាត្រ</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/firstode/" target="_blank">សមីការឌីផេរ៉ង់ស្យែលលំដាប់១</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/math-test-ode1/" target="_blank">តេស្តសមីការឌីផេរ៉ង់ស្យែល ១</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/math-test1/" target="_blank">តេស្តគណិតវិទ្យា ១</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://rosmakara71-hub.github.io/math-test2/" target="_blank">តេស្តគណិតវិទ្យា ២</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/math12-test/" target="_blank">តេស្តថ្នាក់ទី១២</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/preexamgrade11term2/" target="_blank">ប្រឡងឆមាសទី២ ថ្នាក់ទី១១ (ច្បាប់១)</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/preexamgrade11term2-2/" target="_blank">ប្រឡងឆមាសទី២ ថ្នាក់ទី១១ (ច្បាប់២)</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/preexamgrade11term2-3/" target="_blank">ប្រឡងឆមាសទី២ ថ្នាក់ទី១១ (ច្បាប់៣)</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://rosmakara71-hub.github.io/preexamgrade12bacII/" target="_blank">ត្រៀមប្រឡងបាក់ឌុប (ច្បាប់១)</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/preexamgrade12bacII-2/" target="_blank">ត្រៀមប្រឡងបាក់ឌុប (ច្បាប់២)</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/preexamgrade12bacII-3/" target="_blank">ត្រៀមប្រឡងបាក់ឌុប (ច្បាប់៣)</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/preexamgrade12bacII-4/" target="_blank">ត្រៀមប្រឡងបាក់ឌុប (ច្បាប់៤)</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/preexamgrade12bacII-5/" target="_blank">ត្រៀមប្រឡងបាក់ឌុប (ច្បាប់៥)</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://rosmakara71-hub.github.io/preexamgrade12bacII-6/" target="_blank">ត្រៀមប្រឡងបាក់ឌុប (ច្បាប់៦)</a></td>
-            <td><a href="https://rosmakara71-hub.github.io/trigonometric-equation/" target="_blank">សមីការនិងវិសមីការត្រីកោណមាត្រ</td>
-            <td><a href="https://rosmakara71-hub.github.io/prebacIISS/" target="_blank">វិញ្ញាសាត្រៀមប្រឡងបាក់ឌុបថ្នាក់សង្គម</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-
-    
-
 </div>
 
 </body>
