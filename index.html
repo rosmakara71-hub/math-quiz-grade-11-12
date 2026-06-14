@@ -8,7 +8,8 @@
         body { font-family: 'Khmer OS Battambang', sans-serif; padding: 20px; background-color: #eef2f3; }
         .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         h2 { text-align: center; color: #1e3c72; margin-bottom: 30px; line-height: 1.6; }
-        .grid-menu { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+        h3 { color: #2c3e50; margin-top: 25px; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
+        .grid-menu { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-bottom: 20px; }
         .card-link { 
             display: block; padding: 12px; text-align: center; background: #2a5298; 
             color: white; text-decoration: none; border-radius: 6px; font-size: 14px; transition: 0.3s;
@@ -23,35 +24,84 @@
     រៀបចំដោយលោកគ្រូ រស់ មករា<br>
     <span style="font-size: 16px;">Telegram: 086 228 508</span></h2>
     
-    <div class="grid-menu">
-        <script>
-            // ទីនេះអ្នកអាចប្ដូរឈ្មោះខ្មែរតាមចិត្តចង់បាន
-            const repos = [
-                { id: "Vector-1", name: "វ៉ិចទ័រ ១" },
-                { id: "Vector-2", name: "វ៉ិចទ័រ ២" },
-                { id: "Vector-3", name: "វ៉ិចទ័រ ៣" },
-                { id: "complexnumber", name: "ចំនួនកុំផ្លិច" },
-                { id: "trigonometric-rule", name: "រូបមន្តត្រីកោណមាត្រ" },
-                { id: "trigonometric-equation", name: "សមីការត្រីកោណមាត្រ" },
-                { id: "preexamgrade12bacII", name: "វិញ្ញាសា បាក់ឌុប ១" },
-                { id: "preexamgrade12bacII-2", name: "វិញ្ញាសា បាក់ឌុប ២" },
-                { id: "preexamgrade11term2", name: "វិញ្ញាសាទី១១ ឆមាស២" },
-                { id: "math11-value-trigonometric", name: "តម្លៃត្រីកោណមាត្រ" },
-                { id: "domain", name: "ដែនកំណត់ (Domain)" },
-                { id: "firstode", name: "សមីការឌីផេរ៉ង់ស្យែល" },
-                { id: "period", name: "ខួប (Period)" },
-                { id: "math-test1", name: "វិញ្ញាសាទី ១" },
-                { id: "math-test2", name: "វិញ្ញាសាទី ២" },
-                { id: "math12-test", name: "វិញ្ញាសាទី ១២" }
-                // អ្នកអាចបន្តបន្ថែមឈ្មោះផ្សេងទៀតតាមទម្រង់នេះបាន
-            ];
+    <h3>មេរៀនទូទៅ និងចំនួនកុំផ្លិច</h3>
+    <div class="grid-menu" id="group-general"></div>
 
-            repos.forEach(repo => {
+    <h3>ត្រីកោណមាត្រ (Trigonometry)</h3>
+    <div class="grid-menu" id="group-trig"></div>
+
+    <h3>វ៉ិចទ័រ (Vectors)</h3>
+    <div class="grid-menu" id="group-vector"></div>
+
+    <h3>វិញ្ញាសាប្រឡង និងតេស្ត (Exam Prep)</h3>
+    <div class="grid-menu" id="group-exams"></div>
+
+    <script>
+        // បញ្ជីទិន្នន័យដែលបានប្តូរជាឈ្មោះខ្មែរទាំងអស់
+        const generalRepo = [
+            { id: "complexnumber", name: "ចំនួនកុំផ្លិច" },
+            { id: "domain", name: "ដែនកំណត់នៃអនុគមន៍" },
+            { id: "period", name: "ខួបនៃអនុគមន៍" },
+            { id: "firstode", name: "សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី១" },
+            { id: "math-test-ode1", name: "តេស្តសមីការឌីផេរ៉ង់ស្យែល" }
+        ];
+
+        const trigRepo = [
+            { id: "math-tri1", name: "ត្រីកោណមាត្រ ភាគ១" },
+            { id: "trigonometric-rule", name: "រូបមន្តត្រីកោណមាត្រ" },
+            { id: "trigonometric-equation", name: "សមីការត្រីកោណមាត្រ" },
+            { id: "trigonometric-evenodd", name: "អនុគមន៍គូ-សេស ត្រីកោណមាត្រ" },
+            { id: "math11-value-trigonometric", name: "តម្លៃអនុគមន៍ត្រីកោណមាត្រ (ថ្នាក់ទី១១)" }
+        ];
+
+        const vectorRepo = [
+            { id: "Vector-1", name: "វ៉ិចទ័រ មេរៀនទី ១" },
+            { id: "Vector-2", name: "វ៉ិចទ័រ មេរៀនទី ២" },
+            { id: "Vector-4", name: "វ៉ិចទ័រ មេរៀនទី ៤" },
+            { id: "Vector-5", name: "វ៉ិចទ័រ មេរៀនទី ៥" },
+            { id: "Vector-6", name: "វ៉ិចទ័រ មេរៀនទី ៦" },
+            { id: "Vector-7", name: "វ៉ិចទ័រ មេរៀនទី ៧" },
+            { id: "Vector-8", name: "វ៉ិចទ័រ មេរៀនទី ៨" },
+            { id: "Vector-9", name: "វ៉ិចទ័រ មេរៀនទី ៩" },
+            { id: "Vector-10", name: "វ៉ិចទ័រ មេរៀនទី ១០" },
+            { id: "Vector-11", name: "វ៉ិចទ័រ មេរៀនទី ១១" }
+        ];
+
+        const examRepo = [
+            { id: "math-quiz-grade-11-12", name: "កម្រងសំណួរចម្លើយ (ទី១១-១២)" },
+            { id: "math-test1", name: "វិញ្ញាសាតេស្តគណិតវិទ្យា ១" },
+            { id: "math-test2", name: "វិញ្ញាសាតេស្តគណិតវិទ្យា ២" },
+            { id: "math12-test", name: "វិញ្ញាសាតេស្ត ថ្នាក់ទី១២" },
+            { id: "prebacIISS", name: "វិញ្ញាសាត្រៀមប្រឡងបាក់ឌុប" },
+            { id: "preexamgrade11term2", name: "ត្រៀមប្រឡងទី១១ ឆមាសទី២ (ច្បាប់១)" },
+            { id: "preexamgrade11term2-2", name: "ត្រៀមប្រឡងទី១១ ឆមាសទី២ (ច្បាប់២)" },
+            { id: "preexamgrade11term2-3", name: "ត្រៀមប្រឡងទី១១ ឆមាសទី២ (ច្បាប់៣)" },
+            { id: "preexamgrade12bacII", name: "ត្រៀមបាក់ឌុប វិញ្ញាសាទី ១" },
+            { id: "preexamgrade12bacII-1", name: "ត្រៀមបាក់ឌុប វិញ្ញាសាទី ២" },
+            { id: "preexamgrade12bacII-2", name: "ត្រៀមបាក់ឌុប វិញ្ញាសាទី ៣" },
+            { id: "preexamgrade12bacII-3", name: "ត្រៀមបាក់ឌុប វិញ្ញាសាទី ៤" },
+            { id: "preexamgrade12bacII-4", name: "ត្រៀមបាក់ឌុប វិញ្ញាសាទី ៥" },
+            { id: "preexamgrade12bacII-5", name: "ត្រៀមបាក់ឌុប វិញ្ញាសាទី ៦" },
+            { id: "preexamgrade12bacII-6", name: "ត្រៀមបាក់ឌុប វិញ្ញាសាទី ៧" }
+        ];
+
+        // Function សម្រាប់បង្ហាញប៊ូតុងទៅតាមក្រុមនីមួយៗ
+        function renderButtons(repoList, elementId) {
+            const container = document.getElementById(elementId);
+            let htmlContent = "";
+            repoList.forEach(repo => {
                 const url = `https://rosmakara71-hub.github.io/${repo.id}`;
-                document.write(`<a href="${url}" class="card-link" target="_blank">${repo.name}</a>`);
+                htmlContent += `<a href="${url}" class="card-link" target="_blank">${repo.name}</a>`;
             });
-        </script>
-    </div>
+            container.innerHTML = htmlContent;
+        }
+
+        // ដំណើរការដាក់ប៊ូតុងចូលទៅក្នុង HTML
+        renderButtons(generalRepo, "group-general");
+        renderButtons(trigRepo, "group-trig");
+        renderButtons(vectorRepo, "group-vector");
+        renderButtons(examRepo, "group-exams");
+    </script>
 </div>
 
 </body>
