@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="km">
 <head>
@@ -24,38 +23,37 @@
     រៀបចំដោយលោកគ្រូ រស់ មករា<br>
     <span style="font-size: 16px;">Telegram: 086 228 508</span></h2>
     
-    <h3>គណិតវទ្យាថ្នាក់ទី១២វិទ្យាសាស្រ្ត
-</h3>
+    <h3>គណិតវិទ្យាថ្នាក់ទី១២ វិទ្យាសាស្ត្រ</h3>
     <div class="grid-menu" id="group-a"></div>
 
-    <h3>ត្គណិតវទ្យាថ្នាក់ទី១២សង្គម
-</h3>
+    <h3>ត្រីកោណមាត្រ (ថ្នាក់ទី១១-១២)</h3>
     <div class="grid-menu" id="group-b"></div>
 
     <h3>វ៉ិចទ័រ (Vectors)</h3>
     <div class="grid-menu" id="group-vector"></div>
 
-    <h3>គណិតវទ្យាថ្នាក់ទី១១វិទ្យាសាស្ត្រ
-</h3>
-    <div class="grid-menu" id="group-c"></div>
-
-
-    <h3>វិញ្ញាសាត្រៀមប្រឡងថ្នាក់ទី១២
-</h3>
+    <h3>វិញ្ញាសាត្រៀមប្រឡងថ្នាក់ទី១២ (បាក់ឌុប)</h3>
     <div class="grid-menu" id="group-d"></div>
 
-    <h3>វិញ្ញាសាត្រៀមប្រឡងថ្នាក់ទី១១
-</h3>
+    <h3>វិញ្ញាសាត្រៀមប្រឡងថ្នាក់ទី១១</h3>
     <div class="grid-menu" id="group-e"></div>
 
     <script>
-        // បញ្ជីទិន្នន័យដែលបានប្តូរជាឈ្មោះខ្មែរទាំងអស់
+        // បញ្ជីទិន្នន័យ
         const aRepo = [
             { id: "complexnumber", name: "ចំនួនកុំផ្លិច" },
             { id: "domain", name: "ដែនកំណត់នៃអនុគមន៍" },
             { id: "period", name: "ខួបនៃអនុគមន៍" },
             { id: "firstode", name: "សមីការឌីផេរ៉ង់ស្យែល" },
             { id: "math-test-ode1", name: "តេស្តសមីការឌីផេរ៉ង់ស្យែលលំដាប់១" }
+        ];
+
+        const bRepo = [
+            { id: "math-tri1", name: "ត្រីកោណមាត្រ ភាគ១" },
+            { id: "trigonometric-rule", name: "រូបមន្តត្រីកោណមាត្រ" },
+            { id: "trigonometric-equation", name: "សមីការត្រីកោណមាត្រ" },
+            { id: "trigonometric-evenodd", name: "អនុគមន៍គូ-សេស ត្រីកោណមាត្រ" },
+            { id: "math11-value-trigonometric", name: "តម្លៃអនុគមន៍ត្រីកោណមាត្រ (ថ្នាក់ទី១១)" }
         ];
 
         const vectorRepo = [
@@ -70,13 +68,7 @@
             { id: "Vector-10", name: "វ៉ិចទ័រ មេរៀនទី ១០" },
             { id: "Vector-11", name: "វ៉ិចទ័រ មេរៀនទី ១១" }
         ];
-const bRepo = [
-            { id: "math-tri1", name: "ត្រីកោណមាត្រ ភាគ១" },
-            { id: "trigonometric-rule", name: "រូបមន្តត្រីកោណមាត្រ" },
-            { id: "trigonometric-equation", name: "សមីការត្រីកោណមាត្រ" },
-            { id: "trigonometric-evenodd", name: "អនុគមន៍គូ-សេស ត្រីកោណមាត្រ" },
-            { id: "math11-value-trigonometric", name: "តម្លៃអនុគមន៍ត្រីកោណមាត្រ (ថ្នាក់ទី១១)" }
-        ];
+
         const cRepo = [
             { id: "math-test1", name: "វិញ្ញាសាតេស្តគណិតវិទ្យា ១" },
             { id: "math-test2", name: "វិញ្ញាសាតេស្តគណិតវិទ្យា ២" },
@@ -90,15 +82,17 @@ const bRepo = [
             { id: "preexamgrade12bacII-5", name: "ត្រៀមបាក់ឌុប វិញ្ញាសាទី ៥" },
             { id: "preexamgrade12bacII-6", name: "ត្រៀមបាក់ឌុប វិញ្ញាសាទី ៦" }
         ];
-const dRepo = [
 
+        const dRepo = [
             { id: "preexamgrade11term2", name: "ត្រៀមប្រឡងទី១១ ឆមាសទី២ (ច្បាប់១)" },
             { id: "preexamgrade11term2-2", name: "ត្រៀមប្រឡងទី១១ ឆមាសទី២ (ច្បាប់២)" },
             { id: "preexamgrade11term2-3", name: "ត្រៀមប្រឡងទី១១ ឆមាសទី២ (ច្បាប់៣)" }
-    ];
+        ];
+
         // Function សម្រាប់បង្ហាញប៊ូតុងទៅតាមក្រុមនីមួយៗ
         function renderButtons(repoList, elementId) {
             const container = document.getElementById(elementId);
+            if (!container) return; // ការពារកុំឲ្យ error បើរក ID មិនឃើញ
             let htmlContent = "";
             repoList.forEach(repo => {
                 const url = `https://rosmakara71-hub.github.io/${repo.id}`;
@@ -107,11 +101,12 @@ const dRepo = [
             container.innerHTML = htmlContent;
         }
 
-        // ដំណើរការដាក់ប៊ូតុងចូលទៅក្នុង HTML
-        renderButtons(generalRepo, "group-general");
-        renderButtons(trigRepo, "group-trig");
+        // ដំណើរការដាក់ប៊ូតុងចូលទៅក្នុង HTML ឲ្យត្រូវតាមក្រុម
+        renderButtons(aRepo, "group-a");
+        renderButtons(bRepo, "group-b");
         renderButtons(vectorRepo, "group-vector");
-        renderButtons(examRepo, "group-exams");
+        renderButtons(cRepo, "group-d");
+        renderButtons(dRepo, "group-e");
     </script>
 </div>
 
